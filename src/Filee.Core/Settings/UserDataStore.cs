@@ -889,6 +889,9 @@ internal static class SettingsMigrations
         // v48: fragmented MP4 pieces (.m4s) learn the video donut; custom claims stay put.
         if (from < 48)
             changed |= LearnExtensions(profiles, out _, ["m4s"]);
+        // v49: INI settings (.ini) learn the text donut; custom claims stay put.
+        if (from < 49)
+            changed |= LearnExtensions(profiles, out _, ["ini"]);
         return changed;
     }
 

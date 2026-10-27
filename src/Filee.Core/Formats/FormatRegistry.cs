@@ -140,9 +140,9 @@ public static class FormatRegistry
         new("sda", "SDA", FormatCategory.Presentation, ["sda", "sdd"], Writable: false),
 
         // Plain text / markup
-        // Text logs, source/proxy scripts and style sheets are read as plain text, never executed (issues #273, #284, #254,
-        // #388, #368, #607).
-        new("txt", "TXT", FormatCategory.Text, ["txt", "log", "py", "pac", "bat", "command", "lua", "css", "ps1", "sql"]),
+        // Text logs, source/proxy scripts, style sheets and INI settings are read as plain text, never executed (issues
+        // #273, #284, #254, #388, #368, #607, #630).
+        new("txt", "TXT", FormatCategory.Text, ["txt", "log", "py", "pac", "bat", "command", "lua", "css", "ps1", "sql", "ini"]),
         new("md", "Markdown", FormatCategory.Text, ["md", "markdown"]),
         new("html", "HTML", FormatCategory.Text, ["html", "htm", "xhtml"]),
         // A web page saved with its pictures in one MIME file (Chrome, Edge, Word); read as the page it holds.
