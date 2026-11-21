@@ -13,6 +13,46 @@ namespace Filee.App.Tests;
 public sealed class TrayServiceTests
 {
     [AvaloniaFact]
+    public void Mac_menu_bar_has_no_tooltip_even_after_settings_change()
+    {
+        TestServices.EnsureInitialized("en");
+        var app = Application.Current!;
+        var directory = Directory.CreateTempSubdirectory("filee-tray-tooltip-").FullName;
+        try
+        {
+            var store = new UserDataStore(directory);
+            store.Load();
+            var service = new TrayService(store, AppHost.Get<ILocalizer>(), new IconPlatform { SupportsDockVisibility = true },
+                AppHost.Get<WindowService>(), AppHost.Get<UpdateService>());
+            try
+            {
+                service.Create(app);
+                var tray = Assert.Single(TrayIcon.GetIcons(app)!);
+                Assert.Equal("", tray.ToolTipText);
+                store.Settings.Paused = true;
+                store.SaveSettings();
+                Assert.Equal("", tray.ToolTipText);
+            }
+            finally { service.Dispose(); }
+
+            var other = new TrayService(store, AppHost.Get<ILocalizer>(), new IconPlatform(),
+                AppHost.Get<WindowService>(), AppHost.Get<UpdateService>());
+            try
+            {
+                other.Create(app);
+                var tray = Assert.Single(TrayIcon.GetIcons(app)!);
+                Assert.Equal(AppHost.Get<ILocalizer>()["triggers.paused"], tray.ToolTipText);
+                store.Settings.Paused = false;
+                store.SaveSettings();
+                Assert.False(string.IsNullOrEmpty(tray.ToolTipText));
+                Assert.NotEqual(AppHost.Get<ILocalizer>()["triggers.paused"], tray.ToolTipText);
+            }
+            finally { other.Dispose(); }
+        }
+        finally { Directory.Delete(directory, true); }
+    }
+
+    [AvaloniaFact]
     public void Mac_tray_visibility_follows_preference_and_non_mac_tray_stays_visible()
     {
         TestServices.EnsureInitialized("en");
