@@ -35,7 +35,7 @@ public sealed class TrayService(UserDataStore store, ILocalizer loc, IPlatformSe
         _tray = new TrayIcon
         {
             // Set before the icon is attached: on macOS Avalonia passes the tooltip to native code, which can't take null.
-            ToolTipText = "Filee",
+            ToolTipText = platform.SupportsDockVisibility ? "" : "Filee",
             Menu = new NativeMenu { Items = { _open, _pause, new NativeMenuItemSeparator(), _quit } },
             IsVisible = platform.SupportsDockVisibility ? store.Settings.ShowMenuBarIcon : true,
         };
@@ -75,10 +75,14 @@ public sealed class TrayService(UserDataStore store, ILocalizer loc, IPlatformSe
         _open!.Header = loc["tray.open"];
         _pause!.Header = store.Settings.Paused ? loc["tray.resume"] : loc["tray.pause"];
         _quit!.Header = loc["tray.quit"];
-        var drag = store.Settings.Triggers.FirstOrDefault(t => t.Enabled && t.Kind == TriggerKind.Drag);
-        _tray.ToolTipText = store.Settings.Paused
-            ? loc["triggers.paused"]
-            : loc.Format("tray.tooltip", drag is null ? "—" : GestureText.Modifiers(drag.Modifiers));
+        // An empty, non-null value also avoids Avalonia's macOS null tooltip crash on attachment (#1193).
+        if (!platform.SupportsDockVisibility)
+        {
+            var drag = store.Settings.Triggers.FirstOrDefault(t => t.Enabled && t.Kind == TriggerKind.Drag);
+            _tray.ToolTipText = store.Settings.Paused
+                ? loc["triggers.paused"]
+                : loc.Format("tray.tooltip", drag is null ? "—" : GestureText.Modifiers(drag.Modifiers));
+        }
     }
 
     /// <summary>
