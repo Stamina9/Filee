@@ -1072,6 +1072,7 @@
   "pages.past_the_end": "Este PDF termina en la página {0}.",
   "pages.one_pdf": "Un solo PDF",
   "pages.groups": "Varias páginas por archivo",
+  "pages.groups_hint": "Las comas no crean archivos separados. El número indica las páginas por archivo o las partes iguales.",
   "pages.per_file": "páginas por archivo",
   "pages.equal_parts": "partes iguales",
   "presets.page_output": "Guardar las páginas como",

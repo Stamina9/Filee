@@ -1072,6 +1072,7 @@
   "pages.past_the_end": "このPDFは{0}ページまでです。",
   "pages.one_pdf": "1つのPDFにする",
   "pages.groups": "複数ページずつ",
+  "pages.groups_hint": "コンマでファイルは分割されません。数値でファイルあたりのページ数、または均等に分割する数を指定します。",
   "pages.per_file": "ページずつ",
   "pages.equal_parts": "等分",
   "presets.page_output": "ページの保存方法",

@@ -1087,6 +1087,7 @@
   "pages.past_the_end": "Este PDF termina na página {0}.",
   "pages.one_pdf": "Um só PDF",
   "pages.groups": "Várias páginas por arquivo",
+  "pages.groups_hint": "As vírgulas não criam arquivos separados. O número define as páginas por arquivo ou as partes iguais.",
   "pages.per_file": "páginas por arquivo",
   "pages.equal_parts": "partes iguais",
   "presets.page_output": "Salvar as páginas como",

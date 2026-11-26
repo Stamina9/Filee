@@ -1072,6 +1072,7 @@
   "pages.past_the_end": "यह PDF पेज {0} पर खत्म होता है।",
   "pages.one_pdf": "एक PDF",
   "pages.groups": "प्रति फ़ाइल कई पेज",
+  "pages.groups_hint": "अल्पविराम अलग फ़ाइलें नहीं बनाते। संख्या से प्रति फ़ाइल पृष्ठों या बराबर भागों की संख्या तय करें।",
   "pages.per_file": "पेज प्रति फ़ाइल",
   "pages.equal_parts": "बराबर हिस्से",
   "presets.page_output": "पेज ऐसे सहेजें",

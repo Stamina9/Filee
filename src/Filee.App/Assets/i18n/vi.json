@@ -1087,6 +1087,7 @@
   "pages.past_the_end": "PDF này chỉ có đến trang {0}.",
   "pages.one_pdf": "Một tệp PDF",
   "pages.groups": "Nhiều trang mỗi tệp",
+  "pages.groups_hint": "Dấu phẩy không tạo các tệp riêng. Số này đặt số trang mỗi tệp hoặc số phần bằng nhau.",
   "pages.per_file": "trang mỗi tệp",
   "pages.equal_parts": "phần bằng nhau",
   "presets.page_output": "Lưu các trang thành",

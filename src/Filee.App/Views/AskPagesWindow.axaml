@@ -99,6 +99,8 @@
           <ComboBox x:Name="GroupKind" ItemsSource="{Binding GroupKinds}" SelectedItem="{Binding GroupKind}" MinWidth="170"
                     AutomationProperties.Name="{DynamicResource pages.groups}" />
         </StackPanel>
+        <TextBlock x:Name="GroupHint" Classes="caption" TextWrapping="Wrap" IsVisible="{Binding Groups}"
+                   Text="{DynamicResource pages.groups_hint}" />
       </StackPanel>
     </StackPanel>
   </DockPanel>

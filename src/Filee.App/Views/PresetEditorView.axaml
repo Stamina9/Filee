@@ -597,6 +597,8 @@
             <ComboBox x:Name="GroupKind" Grid.Column="2" ItemsSource="{Binding GroupKinds}" SelectedItem="{Binding GroupKind}" HorizontalAlignment="Stretch"
                       AutomationProperties.Name="{DynamicResource pages.groups}" />
           </Grid>
+          <TextBlock x:Name="GroupHint" Classes="caption" TextWrapping="Wrap" IsVisible="{Binding ShowPageGroups}"
+                     Text="{DynamicResource pages.groups_hint}" />
         </StackPanel>
         <TextBlock Classes="caption" TextWrapping="Wrap" Text="{DynamicResource presets.pdf_tables_note}" IsVisible="{Binding ShowPdfTablesNote}" />
         <TextBlock Classes="caption" TextWrapping="Wrap" Text="{DynamicResource presets.document_tables_note}" IsVisible="{Binding ShowPdfTablesNote}" />

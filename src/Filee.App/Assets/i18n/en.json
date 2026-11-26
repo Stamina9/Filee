@@ -1087,6 +1087,7 @@
   "pages.past_the_end": "This PDF ends at page {0}.",
   "pages.one_pdf": "One PDF",
   "pages.groups": "Several pages per file",
+  "pages.groups_hint": "Commas do not make separate files. The number sets pages per file or equal parts.",
   "pages.per_file": "pages per file",
   "pages.equal_parts": "equal parts",
   "presets.page_output": "Save the pages as",

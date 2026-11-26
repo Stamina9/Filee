@@ -388,6 +388,7 @@ public class AskPagesTests
         { "en", false }, { "en", true }, { "ko", false }, { "ko", true },
         { "de", false }, { "ar", true }, { "ru", false }, { "hi", true }, { "vi", false }, { "ja", true },
         { "fa", false }, { "bn-BD", true },
+        { "zh-CN", true }, { "zh-TW", true },
     };
 
     /// <summary>
@@ -422,13 +423,14 @@ public class AskPagesTests
             }
             var bounds = new Rect(window.Bounds.Size);
             string[] names = ["FileName", "PageCount", "RangeBox", "RangeStatus", "SplitChoice", "OnePdf", "PerPage", "Groups", "StartPages", "CancelPages"];
-            string[] shown = dark ? [.. names, "GroupSize", "GroupKind"] : names;
+            string[] shown = dark ? [.. names, "GroupSize", "GroupKind", "GroupHint"] : names;
             foreach (var name in shown)
             {
                 var box = Box(name);
                 Assert.True(box.Width > 0 && bounds.Contains(box), $"{name} {box} outside {bounds}");
             }
             Assert.Equal(dark, window.FindControl<Control>("GroupRow")!.IsVisible);
+            Assert.Equal(dark, window.FindControl<Control>("GroupHint")!.IsVisible);
             Assert.False(Box("OnePdf").Deflate(1).Intersects(Box("PerPage").Deflate(1)));
             Assert.False(Box("PerPage").Deflate(1).Intersects(Box("Groups").Deflate(1)));
             // The switch stays one row.
@@ -542,6 +544,7 @@ public class AskPagesTests
             Assert.True(controls.Single(c => c.Name == "PageOutput").IsEffectivelyVisible);
             Assert.True(controls.Single(c => c.Name == "GroupSize").IsEffectivelyVisible);
             Assert.True(controls.Single(c => c.Name == "GroupKind").IsEffectivelyVisible);
+            Assert.True(controls.Single(c => c.Name == "GroupHint").IsEffectivelyVisible);
             RenderTests.Save(window, $"split-groups-editor-{language}-{(dark ? "dark" : "light")}.png");
             window.Close();
         }

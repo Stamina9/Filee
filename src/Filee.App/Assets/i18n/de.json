@@ -1072,6 +1072,7 @@
   "pages.past_the_end": "Diese PDF endet mit Seite {0}.",
   "pages.one_pdf": "Eine PDF",
   "pages.groups": "Mehrere Seiten pro Datei",
+  "pages.groups_hint": "Kommas erzeugen keine getrennten Dateien. Die Zahl legt Seiten pro Datei oder gleich große Teile fest.",
   "pages.per_file": "Seiten pro Datei",
   "pages.equal_parts": "gleiche Teile",
   "presets.page_output": "Seiten speichern als",

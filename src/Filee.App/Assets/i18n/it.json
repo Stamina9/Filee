@@ -1071,6 +1071,7 @@
 "pages.past_the_end": "Questo PDF finisce a pagina {0}.",
 "pages.one_pdf": "Un solo PDF",
 "pages.groups": "Più pagine per file",
+"pages.groups_hint": "Le virgole non creano file separati. Il numero indica le pagine per file o le parti uguali.",
 "pages.per_file": "pagine per file",
 "pages.equal_parts": "parti uguali",
 "presets.page_output": "Salva le pagine come",

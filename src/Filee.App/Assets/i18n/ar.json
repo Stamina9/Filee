@@ -1072,6 +1072,7 @@
   "pages.past_the_end": "ينتهي ملف PDF هذا عند الصفحة {0}.",
   "pages.one_pdf": "ملف PDF واحد",
   "pages.groups": "عدة صفحات في كل ملف",
+  "pages.groups_hint": "الفواصل لا تنشئ ملفات منفصلة. يحدد الرقم عدد الصفحات لكل ملف أو عدد الأجزاء المتساوية.",
   "pages.per_file": "صفحات في كل ملف",
   "pages.equal_parts": "أجزاء متساوية",
   "presets.page_output": "حفظ الصفحات كـ",

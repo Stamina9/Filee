@@ -1087,6 +1087,7 @@
   "pages.past_the_end": "Ten PDF kończy się na stronie {0}.",
   "pages.one_pdf": "Jeden PDF",
   "pages.groups": "Kilka stron na plik",
+  "pages.groups_hint": "Przecinki nie tworzą osobnych plików. Liczba określa strony na plik lub liczbę równych części.",
   "pages.per_file": "stron na plik",
   "pages.equal_parts": "równych części",
   "presets.page_output": "Zapisz strony jako",

@@ -1072,6 +1072,7 @@
   "pages.past_the_end": "PDF ini berakhir di halaman {0}.",
   "pages.one_pdf": "Satu PDF",
   "pages.groups": "Beberapa halaman per file",
+  "pages.groups_hint": "Koma tidak membuat file terpisah. Angka menentukan halaman per file atau jumlah bagian yang sama besar.",
   "pages.per_file": "halaman per file",
   "pages.equal_parts": "bagian sama besar",
   "presets.page_output": "Simpan halaman sebagai",

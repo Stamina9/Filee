@@ -1087,6 +1087,7 @@
   "pages.past_the_end": "此 PDF 只到第 {0} 頁。",
   "pages.one_pdf": "合為一個 PDF",
   "pages.groups": "多頁一個檔案",
+  "pages.groups_hint": "逗號不會將頁面拆成不同檔案。請用數字設定每個檔案的頁數或等分的份數。",
   "pages.per_file": "頁一個檔案",
   "pages.equal_parts": "等分",
   "presets.page_output": "頁面儲存方式",

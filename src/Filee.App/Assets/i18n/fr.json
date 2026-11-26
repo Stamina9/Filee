@@ -1087,6 +1087,7 @@
   "pages.past_the_end": "Ce PDF s'arrête à la page {0}.",
   "pages.one_pdf": "Un seul PDF",
   "pages.groups": "Plusieurs pages par fichier",
+  "pages.groups_hint": "Les virgules ne créent pas de fichiers séparés. Le nombre définit les pages par fichier ou les parts égales.",
   "pages.per_file": "pages par fichier",
   "pages.equal_parts": "parties égales",
   "presets.page_output": "Enregistrer les pages en",

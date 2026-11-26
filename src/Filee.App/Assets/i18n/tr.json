@@ -1072,6 +1072,7 @@
   "pages.past_the_end": "Bu PDF {0}. sayfada bitiyor.",
   "pages.one_pdf": "Tek PDF",
   "pages.groups": "Dosya başına birkaç sayfa",
+  "pages.groups_hint": "Virgüller ayrı dosyalar oluşturmaz. Sayı, dosya başına sayfayı veya eşit parça sayısını belirler.",
   "pages.per_file": "sayfada bir dosya",
   "pages.equal_parts": "eşit parça",
   "presets.page_output": "Sayfaları şöyle kaydet",

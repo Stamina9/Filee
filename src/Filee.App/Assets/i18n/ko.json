@@ -1087,6 +1087,7 @@
   "pages.past_the_end": "이 PDF는 {0}페이지까지 있어요.",
   "pages.one_pdf": "PDF 하나로",
   "pages.groups": "여러 페이지씩",
+  "pages.groups_hint": "쉼표로 파일이 나뉘지는 않습니다. 숫자로 파일당 페이지 수 또는 균등 분할할 개수를 정하세요.",
   "pages.per_file": "페이지씩",
   "pages.equal_parts": "등분",
   "presets.page_output": "페이지 저장 방식",
